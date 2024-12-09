@@ -14,12 +14,11 @@ let name = data.result.title;
 await m.reply(`_Downloading ${name}_`)
 
 
-
-
 await client.sendMessage(m.chat, {
- audio: {url: data.result.audioLink},
+ document: {url: data.result.audioLink},
 mimetype: "audio/mpeg",
  fileName: name }, { quoted: m });
+
 
 
 } catch (error) {
